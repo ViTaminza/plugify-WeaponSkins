@@ -1,0 +1,22 @@
+[Main]
+MusicKitMvpAnthem = false   # гимн MVP из набора скинченджера выключен: в конце раунда играет round_end_sounds
+StorageBackend = "pisex"
+InventoryUpdateBackend = "hook"
+SyncFromDatabaseWhenPlayerJoin = false
+ItemLanguages = []
+
+[Main.Pisex]
+ConnectionName = "skins"
+TablePrefix = "sc_"
+ServerId = 1
+AutoCreatePlayer = true
+UseExtTable = true
+LazyLoadPerPlayer = true
+PinsEnabled = true
+
+[Main.Commands]
+RedirectMenusToSite = true
+SiteUrl = "vcs2.ru"
+MenuAliases = ["ws", "skins", "gloves", "knife", "agents", "music", "stickers", "keychains", "pins"]
+SyncCommand = "wp"
+SyncCooldownSeconds = 20

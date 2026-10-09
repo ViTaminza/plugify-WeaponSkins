@@ -1,0 +1,39 @@
+{
+  // WeaponSkins gamedata - s2sdk gamedata format (same schema as the s2sdk plugin's own
+  // gamedata.jsonc), loaded with s2sdk LoadGameConfigFile / GetGameConfigSignature.
+  //
+  // Both linuxsteamrt64 patterns were checked against the current game binary
+  // (cs2test/upper/game/csgo/bin/linuxsteamrt64/libserver.so, byte-identical to the live
+  // /srv/cs2-go/.../libserver.so in the regions checked): each matches exactly once.
+  //   GiveNamedItem                                  -> file offset 0x15852A0
+  //   CAttributeList::SetOrAddAttributeValueByName   -> file offset 0x1CA66E0
+  //
+  // GiveNamedItem is the same signature the SwiftlyS2 plugin shipped in
+  // resources/gamedata/signatures.jsonc; SetOrAddAttributeValueByName is the function SwiftlyS2
+  // called through GameFunctions.pSetOrAddAttribute for every attribute write (pattern from
+  // SwiftlyS2's gamedata/cs2/core/signatures.jsonc, win64 pattern likewise).
+  //
+  // ABI:
+  //   CBaseEntity* CCSPlayer_ItemServices::GiveNamedItem(this, const char* name, nint subtype,
+  //                                                      CEconItemView* pScriptItem, nint a5, nint a6)
+  //     rdi = this, rsi = name, rdx = subtype, rcx = CEconItemView*, r8 = a5, r9 = a6 (origin ptr)
+  //     SIX 64-bit argument slots: a detour must declare all of them (engine.cpp
+  //     AppendGiveNamedItemArguments), polyhook forwards only the declared ones to the original.
+  //   void CAttributeList::SetOrAddAttributeValueByName(this, const char* name, float value)
+  //     rdi = this, rsi = name, xmm0 = value
+  "$schema": "https://raw.githubusercontent.com/untrustedmodders/plugify-plugin-s2sdk/refs/heads/main/schemas/gamedata.schema.json",
+  "csgo": {
+    "Signatures": {
+      "GiveNamedItem": {
+        "library": "server",
+        "win64": "48 89 5C 24 08 48 89 74 24 10 48 89 7C 24 20 44 89 44 24 18",
+        "linuxsteamrt64": "55 48 89 E5 41 57 41 56 41 55 41 54 53 48 81 EC ? ? ? ? 48 89 BD ? ? ? ? 89 95 ? ? ? ? 48 89 8D ? ? ? ? 44 89 85"
+      },
+      "CAttributeList::SetOrAddAttributeValueByName": {
+        "library": "server",
+        "win64": "48 89 4C 24 ? 53 41 55 41 56",
+        "linuxsteamrt64": "55 48 89 E5 41 57 41 56 41 55 49 89 FD 41 54 53 48 89 F3 48 83 EC ? F3 0F 11 85"
+      }
+    }
+  }
+}

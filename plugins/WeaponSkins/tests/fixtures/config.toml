@@ -1,0 +1,26 @@
+# Test fixture — a copy of the saved, non-secret production config
+# (ref/prod-27016/swiftlys2/configs/plugins/WeaponSkins/config.toml). The test prefers the real
+# file when it is readable and falls back to this one; values must stay identical to production.
+
+[Main]
+MusicKitMvpAnthem = false   # гимн MVP из набора скинченджера выключен: в конце раунда играет round_end_sounds
+StorageBackend = "pisex"
+InventoryUpdateBackend = "hook"
+SyncFromDatabaseWhenPlayerJoin = false
+ItemLanguages = []
+
+[Main.Pisex]
+ConnectionName = "skins"
+TablePrefix = "sc_"
+ServerId = 1
+AutoCreatePlayer = true
+UseExtTable = true
+LazyLoadPerPlayer = true
+PinsEnabled = true
+
+[Main.Commands]
+RedirectMenusToSite = true
+SiteUrl = "vcs2.ru"
+MenuAliases = ["ws", "skins", "gloves", "knife", "agents", "music", "stickers", "keychains", "pins"]
+SyncCommand = "wp"
+SyncCooldownSeconds = 20

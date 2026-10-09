@@ -1,0 +1,42 @@
+{
+    // Test fixture only — SwiftlyS2 database.jsonc layout with DUMMY placeholder credentials.
+    // Never place real credentials in this file; the tests only prove the parsing contract.
+    "default_connection": "default",
+    "connections": {
+        "default": "mysql://ws_dummy:ws_dummy_pw_default@db.example.invalid:3306/example_db",
+        "skins": {
+            "driver": "mysql",
+            "host": "db.example.invalid",
+            "database": "mirrors_dummy",
+            "user": "ws_dummy",
+            "pass": "ws_dummy_pw_1",
+            "port": 3307,
+            "timeout": 25,
+            "charset": "utf8mb4"
+        },
+        "skins_legacy_password": {
+            "driver": "mariadb",
+            "host": "10.0.0.9",
+            "database": "skins_dummy",
+            "user": "ws_dummy2",
+            "password": "ws_dummy_pw_2"
+        },
+        "skins_uri": "mysql://ws_uri:du%40mm%79@10.0.0.9:3308/skins_db",
+        "skins_empty_pass": {
+            "driver": "mysql",
+            "host": "127.0.0.1",
+            "database": "skins_db",
+            "user": "root",
+            "pass": ""
+        },
+        "postgres_bad": {
+            "driver": "postgresql",
+            "host": "localhost",
+            "database": "x",
+            "user": "y",
+            "pass": "ws_dummy_pw_3",
+            "port": 5432
+        },
+        "sqlite_bad": "sqlite://local.db"
+    }
+}

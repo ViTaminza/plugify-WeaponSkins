@@ -1,0 +1,1340 @@
+// Source-grounded excerpt; see game_excerpt_source.md.
+"items_game"
+{
+	"prefabs"
+	{
+		"weapon_supports_keychains"
+		{
+			"capabilities"
+			{
+				"can_keychain"		"1"
+			}
+			"keychains"		"single"
+		}
+		"weapon_supports_stickers"
+		{
+			"capabilities"
+			{
+				"can_sticker"		"1"
+			}
+			"stickers"		"weapon"
+		}
+		"weapon_case_base"
+		{
+			"item_class"		"supply_crate"
+			"item_type_name"		"#CSGO_Type_WeaponCase"
+			"item_name"		"#CSGO_WeaponCase_Standard"
+			"image_inventory"		"econ/weapon_cases/weapon_case_generic"
+			"item_quality"		"unique"
+			"item_rarity"		"common"
+			"min_ilevel"		"1"
+			"max_ilevel"		"1"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"mouse_pressed_sound"		"sounds/physics/plastic/plastic_box_impact_soft1.vsnd"
+			"drop_sound"		"sounds/physics/plastic/plastic_box_impact_hard1.vsnd"
+			"tool"
+			{
+				"type"		"supply_crate"
+				"usage_capabilities"
+				{
+					"usable_out_of_game"		"1"
+				}
+			}
+			"capabilities"
+			{
+				"decodable"		"1"
+			}
+			"image_unusual_item"		"econ/weapon_cases/default_rare_item"
+			"loot_list_rare_item_name"		"#Exceedingly_Rare_Item"
+			"loot_list_rare_item_footer"		"#Econ_Revolving_Loot_List_Rare_Item"
+		}
+		"weapon_base"
+		{
+			"craft_class"		"weapon"
+			"craft_material_type"		"weapon"
+			"item_type_name"		"#CSGO_Type_Weapon"
+			"item_quality"		"unique"
+			"item_rarity"		"common"
+			"min_ilevel"		"1"
+			"max_ilevel"		"1"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"mouse_pressed_sound"		"sounds/weapons/m4a1/m4a1_clipout.vsnd"
+			"drop_sound"		"sounds/weapons/m4a1/m4a1_clipint.vsnd"
+			"inventory_image_data"
+			{
+				"camera_angles"		"2.0 -130.0 0.0"
+				"camera_offset"		"0.0 1.0 -2.0"
+				"camera_fov"		"35.000000"
+				"override_default_light"		"1"
+				"spot_light_key"
+				{
+					"position"		"-120 120 180"
+					"color"		"2 2.1 2.3"
+					"lookat"		"0.0 0.0 0.0"
+					"inner_cone"		"0.500000"
+					"outer_cone"		"1.000000"
+				}
+				"spot_light_rim"
+				{
+					"position"		"10.0 -90.0 -60.0"
+					"color"		"3 5 5"
+					"lookat"		"0.0 0.0 0.0"
+					"inner_cone"		"0.040000"
+					"outer_cone"		"0.500000"
+				}
+			}
+			"taxonomy"
+			{
+				"weapon"		"1"
+				"self_damage_on_miss__inflicts_damage"		"1"
+			}
+		}
+		"melee"
+		{
+			"prefab"		"weapon_base"
+			"item_class"		"weapon_knife"
+			"item_type_name"		"#CSGO_Type_Knife"
+			"flexible_loadout_category"		"melee"
+			"flexible_loadout_group"		"melee"
+			"flexible_loadout_slot"		"melee"
+			"inv_group_equipment"		"melee"
+			"icon_default_image"		"materials/icons/inventory_icon_weapon_knife.vtf"
+			"mouse_pressed_sound"		"sounds/weapons/knife/knife_deploy1.vsnd"
+			"drop_sound"		"sounds/weapons/knife/knife_hit1.vsnd"
+			"item_name"		"#SFUI_WPNHUD_Knife"
+			"model_player"		"weapons/models/knife/knife_default_ct/weapon_knife_default_ct.vmdl"
+			"model_world"		"weapons/models/knife/knife_default_ct/weapon_knife_default_ct.vmdl"
+			"item_gear_slot"		"melee"
+			"item_gear_slot_position"		"0"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_stattrack_swap"		"1"
+			}
+			"inventory_image_data"
+			{
+				"camera_angles"		"30.0 -90.0 25.0"
+				"camera_offset"		"7.0 2.0 -1.5"
+				"spot_light_key"
+				{
+					"position"		"-60 90 60"
+					"color"		"1.5 1.55 1.6"
+					"lookat"		"0.0 0.0 0.0"
+					"inner_cone"		"0.500000"
+					"outer_cone"		"1.000000"
+				}
+				"spot_light_rim"
+				{
+					"position"		"0 -30 -120"
+					"color"		"3 5 5"
+					"lookat"		"0.0 0.0 0.0"
+					"inner_cone"		"0.040000"
+					"outer_cone"		"0.500000"
+				}
+				"point_light_accent"
+				{
+					"position"		"15 7 4"
+					"color"		"0.5 0.5 0.5"
+				}
+			}
+			"visuals"
+			{
+				"weapon_type"		"Knife"
+				"player_animation_extension"		"knife"
+				"sound_reload"		"Default.Reload"
+				"sound_empty"		"Default.ClipEmpty_Rifle"
+				"sound_single_shot"		"Weapon_DEagle.Single"
+				"sound_nearlyempty"		"Default.nearlyempty"
+			}
+			"taxonomy"
+			{
+				"melee"		"1"
+			}
+		}
+		"melee_unusual"
+		{
+			"prefab"		"melee"
+			"craft_class"		"unusual"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"item_rarity"		"ancient"
+		}
+		"primary"
+		{
+			"prefab"		"weapon_base weapon_supports_stickers weapon_supports_keychains"
+			"item_gear_slot"		"primary"
+			"item_gear_slot_position"		"0"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"paintable"		"1"
+				"can_stattrack_swap"		"1"
+			}
+			"taxonomy"
+			{
+				"primary"		"1"
+			}
+		}
+		"smg"
+		{
+			"prefab"		"primary"
+			"item_type_name"		"#CSGO_Type_SMG"
+			"flexible_loadout_category"		"smg"
+			"flexible_loadout_group"		"smg"
+			"inv_group_equipment"		"smg"
+			"mouse_pressed_sound"		"sounds/weapons/p90/p90_clipout.vsnd"
+			"drop_sound"		"sounds/weapons/p90/p90_clipin.vsnd"
+			"visuals"
+			{
+				"weapon_type"		"SubMachinegun"
+			}
+			"taxonomy"
+			{
+				"smg"		"1"
+			}
+		}
+		"rifle"
+		{
+			"prefab"		"primary"
+			"item_type_name"		"#CSGO_Type_Rifle"
+			"flexible_loadout_category"		"rifle"
+			"flexible_loadout_group"		"rifle"
+			"inv_group_equipment"		"rifle"
+			"mouse_pressed_sound"		"sounds/weapons/m4a1/m4a1_clipout.vsnd"
+			"drop_sound"		"sounds/weapons/m4a1/m4a1_clipin.vsnd"
+			"visuals"
+			{
+				"weapon_type"		"Rifle"
+			}
+			"taxonomy"
+			{
+				"rifle"		"1"
+			}
+		}
+		"sniper_rifle"
+		{
+			"prefab"		"primary"
+			"item_type_name"		"#CSGO_Type_SniperRifle"
+			"flexible_loadout_category"		"rifle"
+			"flexible_loadout_group"		"rifle"
+			"inv_group_equipment"		"rifle"
+			"mouse_pressed_sound"		"sounds/weapons/awp/awp_clipout.vsnd"
+			"drop_sound"		"sounds/weapons/awp/awp_clipin.vsnd"
+			"visuals"
+			{
+				"weapon_type"		"SniperRifle"
+			}
+			"taxonomy"
+			{
+				"sniper_rifle"		"1"
+			}
+		}
+		"weapon_mp7_prefab"
+		{
+			"prefab"		"smg"
+			"item_class"		"weapon_mp7"
+			"item_name"		"#SFUI_WPNHUD_MP7"
+			"item_description"		"#CSGO_Item_Desc_MP7"
+			"image_inventory"		"econ/weapons/base_weapons/weapon_mp7"
+			"model_player"		"weapons/models/mp7/weapon_smg_mp7.vmdl"
+			"model_world"		"weapons/models/mp7/weapon_smg_mp7.vmdl"
+			"icon_default_image"		"materials/icons/inventory_icon_weapon_mp7.vtf"
+			"used_by_classes"
+			{
+				"terrorists"		"1"
+				"counter-terrorists"		"1"
+			}
+			"attributes"
+			{
+				"magazine model"		"weapons/models/mp7/weapon_smg_mp7_mag.vmdl"
+			}
+			"inventory_image_data"
+			{
+				"camera_angles"		"0.0 -135.0 0.0"
+				"camera_offset"		"7.0 1.0 -1.7"
+				"point_light_accent"
+				{
+					"position"		"40 30 10"
+					"color"		"1 1 1"
+				}
+			}
+			"paint_data"
+			{
+				"PaintableMaterial0"
+				{
+					"Name"		"smg_mp7"
+					"ViewmodelDim"		"2048"
+					"WorldDim"		"512"
+					"BaseTextureOverride"		"0"
+					"WeaponLength"		"15.676800"
+					"UVScale"		"0.446000"
+				}
+			}
+			"visuals"
+			{
+				"muzzle_flash_effect_1st_person"		"weapon_muzzle_flash_smg"
+				"muzzle_flash_effect_3rd_person"		"weapon_muzzle_flash_smg"
+				"heat_effect"		"weapon_muzzle_smoke"
+				"addon_location"		"primary_smg"
+				"eject_brass_effect"		"weapon_shell_casing_9mm"
+				"tracer_effect"		"weapon_tracers_smg"
+				"weapon_type"		"SubMachinegun"
+				"player_animation_extension"		"mp7"
+				"primary_ammo"		"BULLET_PLAYER_9MM"
+				"secondary_ammo"		"BULLET_PLAYER_9MM"
+				"sound_single_shot"		"Weapon_MP7.Single"
+				"sound_nearlyempty"		"Default.nearlyempty"
+			}
+		}
+		"weapon_mp5sd_prefab"
+		{
+			"prefab"		"smg"
+			"item_class"		"weapon_mp7"
+			"anim_class"		"weapon_mp5sd"
+			"item_name"		"#SFUI_WPNHUD_MP5SD"
+			"item_description"		"#CSGO_Item_Desc_MP5SD"
+			"image_inventory"		"econ/weapons/base_weapons/weapon_mp5sd"
+			"model_player"		"weapons/models/mp5sd/weapon_smg_mp5sd.vmdl"
+			"model_world"		"weapons/models/mp5sd/weapon_smg_mp5sd.vmdl"
+			"icon_default_image"		"materials/icons/inventory_icon_weapon_mp5sd.vtf"
+			"used_by_classes"
+			{
+				"terrorists"		"1"
+				"counter-terrorists"		"1"
+			}
+			"attributes"
+			{
+				"magazine model"		"weapons/models/mp5sd/weapon_smg_mp5sd_mag.vmdl"
+			}
+			"inventory_image_data"
+			{
+				"camera_angles"		"0.0 -135.0 0.0"
+				"camera_offset"		"7.0 1.0 -1.7"
+				"point_light_accent"
+				{
+					"position"		"40 30 10"
+					"color"		"1 1 1"
+				}
+			}
+			"paint_data"
+			{
+				"PaintableMaterial0"
+				{
+					"Name"		"smg_mp5sd"
+					"ViewmodelDim"		"2048"
+					"WorldDim"		"512"
+					"BaseTextureOverride"		"0"
+					"WeaponLength"		"20"
+					"UVScale"		"0.446000"
+				}
+			}
+			"visuals"
+			{
+				"muzzle_flash_effect_1st_person"		"weapon_muzzle_flash_assaultrifle_silenced"
+				"muzzle_flash_effect_1st_person_alt"		"weapon_muzzle_flash_assaultrifle_silenced"
+				"muzzle_flash_effect_3rd_person"		"weapon_muzzle_flash_assaultrifle_silenced"
+				"muzzle_flash_effect_3rd_person_alt"		"weapon_muzzle_flash_assaultrifle_silenced"
+				"heat_effect"		"weapon_muzzle_smoke"
+				"addon_location"		"primary_smg"
+				"eject_brass_effect"		"weapon_shell_casing_9mm"
+				"tracer_effect"		"weapon_tracers_smg"
+				"weapon_type"		"SubMachinegun"
+				"player_animation_extension"		"mp5sd"
+				"primary_ammo"		"BULLET_PLAYER_9MM"
+				"secondary_ammo"		"BULLET_PLAYER_9MM"
+				"sound_single_shot"		"Weapon_MP5.Single"
+				"sound_special1"		"Weapon_MP5.Single"
+				"sound_nearlyempty"		"Default.nearlyempty"
+			}
+		}
+		"weapon_mp9_prefab"
+		{
+			"prefab"		"smg"
+			"item_class"		"weapon_mp9"
+			"item_name"		"#SFUI_WPNHUD_MP9"
+			"item_description"		"#CSGO_Item_Desc_MP9"
+			"image_inventory"		"econ/weapons/base_weapons/weapon_mp9"
+			"model_player"		"weapons/models/mp9/weapon_smg_mp9.vmdl"
+			"model_world"		"weapons/models/mp9/weapon_smg_mp9.vmdl"
+			"icon_default_image"		"materials/icons/inventory_icon_weapon_mp9.vtf"
+			"used_by_classes"
+			{
+				"counter-terrorists"		"1"
+			}
+			"attributes"
+			{
+				"magazine model"		"weapons/models/mp9/weapon_smg_mp9_mag.vmdl"
+			}
+			"inventory_image_data"
+			{
+				"camera_offset"		"10.0 3.0 -1.7"
+				"camera_fov"		"45"
+				"spot_light_key"
+				{
+					"position"		"-120 120 120"
+					"color"		"2 2.1 2.3"
+					"lookat"		"0.0 0.0 0.0"
+					"inner_cone"		"0.500000"
+					"outer_cone"		"1.000000"
+				}
+				"point_light_accent"
+				{
+					"position"		"30 30 20"
+					"color"		"0.25 0.25 0.25"
+				}
+			}
+			"paint_data"
+			{
+				"PaintableMaterial0"
+				{
+					"Name"		"smg_mp9"
+					"ViewmodelDim"		"2048"
+					"WorldDim"		"512"
+					"BaseTextureOverride"		"0"
+					"WeaponLength"		"22.126101"
+					"UVScale"		"0.485000"
+				}
+			}
+			"visuals"
+			{
+				"muzzle_flash_effect_1st_person"		"weapon_muzzle_flash_smg"
+				"muzzle_flash_effect_3rd_person"		"weapon_muzzle_flash_smg"
+				"heat_effect"		"weapon_muzzle_smoke"
+				"addon_location"		"primary_smg"
+				"eject_brass_effect"		"weapon_shell_casing_9mm"
+				"tracer_effect"		"weapon_tracers_smg"
+				"weapon_type"		"SubMachinegun"
+				"player_animation_extension"		"mp9"
+				"primary_ammo"		"BULLET_PLAYER_9MM"
+				"sound_single_shot"		"Weapon_MP9.Single"
+				"sound_nearlyempty"		"Default.nearlyempty"
+			}
+		}
+		"weapon_ak47_prefab"
+		{
+			"prefab"		"rifle"
+			"item_class"		"weapon_ak47"
+			"item_name"		"#SFUI_WPNHUD_AK47"
+			"item_description"		"#CSGO_Item_Desc_AK47"
+			"item_rarity"		"uncommon"
+			"image_inventory"		"econ/weapons/base_weapons/weapon_ak47"
+			"model_player"		"weapons/models/ak47/weapon_rif_ak47.vmdl"
+			"model_world"		"weapons/models/ak47/weapon_rif_ak47.vmdl"
+			"icon_default_image"		"materials/icons/inventory_icon_weapon_ak47.vtf"
+			"used_by_classes"
+			{
+				"terrorists"		"1"
+			}
+			"attributes"
+			{
+				"magazine model"		"weapons/models/ak47/weapon_rif_ak47_mag.vmdl"
+			}
+			"inventory_image_data"
+			{
+				"camera_angles"		"-2.0 -135.0 0.0"
+				"camera_offset"		"18.0 3.7 -2.5"
+			}
+			"paint_data"
+			{
+				"PaintableMaterial0"
+				{
+					"Name"		"rif_ak47"
+					"OrigMat"		"ak47"
+					"ViewmodelDim"		"2048"
+					"WorldDim"		"512"
+					"BaseTextureOverride"		"0"
+					"WeaponLength"		"37.746201"
+					"UVScale"		"0.549000"
+				}
+			}
+			"visuals"
+			{
+				"muzzle_flash_effect_1st_person"		"weapon_muzzle_flash_assaultrifle"
+				"muzzle_flash_effect_3rd_person"		"weapon_muzzle_flash_assaultrifle"
+				"heat_effect"		"weapon_muzzle_smoke"
+				"addon_location"		"primary_rifle"
+				"eject_brass_effect"		"weapon_shell_casing_rifle"
+				"tracer_effect"		"weapon_tracers_assrifle"
+				"weapon_type"		"Rifle"
+				"player_animation_extension"		"ak"
+				"primary_ammo"		"BULLET_PLAYER_762MM"
+				"sound_single_shot"		"Weapon_AK47.Single"
+				"sound_nearlyempty"		"Default.nearlyempty"
+			}
+		}
+		"weapon_m4a1_prefab"
+		{
+			"prefab"		"rifle"
+			"item_class"		"weapon_m4a1"
+			"item_name"		"#SFUI_WPNHUD_M4A1"
+			"item_description"		"#CSGO_Item_Desc_M4A4"
+			"item_rarity"		"uncommon"
+			"image_inventory"		"econ/weapons/base_weapons/weapon_m4a1"
+			"model_player"		"weapons/models/m4a4/weapon_rif_m4a4.vmdl"
+			"model_world"		"weapons/models/m4a4/weapon_rif_m4a4.vmdl"
+			"icon_default_image"		"materials/icons/inventory_icon_weapon_m4a1.vtf"
+			"used_by_classes"
+			{
+				"counter-terrorists"		"1"
+			}
+			"attributes"
+			{
+				"magazine model"		"weapons/models/m4a4/weapon_rif_m4a4_mag.vmdl"
+			}
+			"inventory_image_data"
+			{
+				"camera_angles"		"-2.0 -135.0 0.0"
+				"camera_offset"		"22.0 3.9 -3.0"
+				"point_light_accent"
+				{
+					"position"		"20 3 7"
+					"color"		"0.25 0.25 0.25"
+				}
+			}
+			"paint_data"
+			{
+				"PaintableMaterial0"
+				{
+					"Name"		"rif_m4a1"
+					"ViewmodelDim"		"2048"
+					"WorldDim"		"512"
+					"BaseTextureOverride"		"0"
+					"WeaponLength"		"35.322601"
+					"UVScale"		"0.425000"
+				}
+			}
+			"visuals"
+			{
+				"muzzle_flash_effect_1st_person"		"weapon_muzzle_flash_assaultrifle"
+				"muzzle_flash_effect_3rd_person"		"weapon_muzzle_flash_assaultrifle"
+				"heat_effect"		"weapon_muzzle_smoke"
+				"addon_location"		"primary_rifle"
+				"eject_brass_effect"		"weapon_shell_casing_rifle"
+				"tracer_effect"		"weapon_tracers_assrifle"
+				"weapon_type"		"Rifle"
+				"player_animation_extension"		"m4"
+				"primary_ammo"		"BULLET_PLAYER_556MM"
+				"sound_single_shot"		"Weapon_M4A1.Single"
+				"sound_special1"		"Weapon_M4A1.Silenced"
+				"sound_nearlyempty"		"Default.nearlyempty"
+			}
+		}
+		"weapon_awp_prefab"
+		{
+			"prefab"		"sniper_rifle"
+			"item_class"		"weapon_awp"
+			"item_name"		"#SFUI_WPNHUD_AWP"
+			"item_description"		"#CSGO_Item_Desc_AWP"
+			"item_rarity"		"uncommon"
+			"image_inventory"		"econ/weapons/base_weapons/weapon_awp"
+			"model_player"		"weapons/models/awp/weapon_snip_awp.vmdl"
+			"model_world"		"weapons/models/awp/weapon_snip_awp.vmdl"
+			"icon_default_image"		"materials/icons/inventory_icon_weapon_awp.vtf"
+			"zoom_in_sound"		"Weapon_AWP.Zoom"
+			"zoom_out_sound"		"Weapon_AWP.ZoomOut"
+			"used_by_classes"
+			{
+				"terrorists"		"1"
+				"counter-terrorists"		"1"
+			}
+			"inventory_image_data"
+			{
+				"camera_angles"		"-5.0 -140.0 0.0"
+				"camera_offset"		"25.0 0.6 -3.5"
+				"spot_light_key"
+				{
+					"position"		"-90 80 220"
+					"color"		"2 2.1 2.3"
+					"lookat"		"0.0 0.0 0.0"
+					"inner_cone"		"0.500000"
+					"outer_cone"		"1.000000"
+				}
+				"spot_light_rim"
+				{
+					"position"		"0 -130 -80"
+					"color"		"3 5 5"
+					"lookat"		"0.0 0.0 0.0"
+					"inner_cone"		"0.040000"
+					"outer_cone"		"0.500000"
+				}
+				"point_light_accent"
+				{
+					"position"		"0 20 25"
+					"color"		"3 3 3"
+				}
+			}
+			"attributes"
+			{
+				"magazine model"		"weapons/models/awp/weapon_snip_awp_mag.vmdl"
+			}
+			"paint_data"
+			{
+				"PaintableMaterial0"
+				{
+					"Name"		"snip_awp"
+					"OrigMat"		"awp"
+					"ViewmodelDim"		"2048"
+					"WorldDim"		"512"
+					"BaseTextureOverride"		"1"
+					"WeaponLength"		"53.803902"
+					"UVScale"		"1.029000"
+				}
+			}
+			"visuals"
+			{
+				"muzzle_flash_effect_1st_person"		"weapon_muzzle_flash_awp"
+				"muzzle_flash_effect_3rd_person"		"weapon_muzzle_flash_awp"
+				"heat_effect"		"weapon_muzzle_smoke"
+				"addon_location"		"primary_sniper"
+				"eject_brass_effect"		"weapon_shell_casing_50cal"
+				"tracer_effect"		"weapon_tracers_rifle"
+				"weapon_type"		"SniperRifle"
+				"player_animation_extension"		"awp"
+				"primary_ammo"		"BULLET_PLAYER_338MAG"
+				"sound_single_shot"		"Weapon_AWP.Single"
+				"sound_nearlyempty"		"Default.nearlyempty"
+			}
+		}
+		"weapon_m4a1_silencer_prefab"
+		{
+			"prefab"		"rifle"
+			"item_class"		"weapon_m4a1"
+			"anim_class"		"weapon_m4a1_silencer"
+			"item_name"		"#SFUI_WPNHUD_M4_SILENCER"
+			"item_description"		"#CSGO_Item_Desc_m4a1_silencer"
+			"item_rarity"		"uncommon"
+			"image_inventory"		"econ/weapons/base_weapons/weapon_m4a1_silencer"
+			"model_player"		"weapons/models/m4a1_silencer/weapon_rif_m4a1_silencer.vmdl"
+			"model_world"		"weapons/models/m4a1_silencer/weapon_rif_m4a1_silencer.vmdl"
+			"icon_default_image"		"materials/icons/inventory_icon_weapon_m4a1_silencer.vtf"
+			"used_by_classes"
+			{
+				"counter-terrorists"		"1"
+			}
+			"inventory_image_data"
+			{
+				"camera_angles"		"2.0 -135.0 0.0"
+				"camera_offset"		"13.0 5.1 -4.0"
+			}
+			"attributes"
+			{
+				"icon display model"		"weapons/models/m4a1_silencer/weapon_rif_m4a1_silencer.vmdl"
+				"magazine model"		"weapons/models/m4a1_silencer/weapon_rif_m4a1_silencer_mag.vmdl"
+			}
+			"paint_data"
+			{
+				"PaintableMaterial0"
+				{
+					"Name"		"rif_m4a1_s"
+					"ViewmodelDim"		"2048"
+					"WorldDim"		"512"
+					"BaseTextureOverride"		"0"
+					"WeaponLength"		"47.460999"
+					"UVScale"		"0.916700"
+				}
+			}
+			"visuals"
+			{
+				"primary_ammo"		"BULLET_PLAYER_556MM_SMALL"
+				"weapon_type"		"Rifle"
+				"addon_location"		"primary_rifle"
+				"eject_brass_effect"		"weapon_shell_casing_rifle"
+				"tracer_effect"		"weapon_tracers_assrifle"
+				"muzzle_flash_effect_1st_person"		"weapon_muzzle_flash_assaultrifle"
+				"muzzle_flash_effect_1st_person_alt"		"weapon_muzzle_flash_assaultrifle_silenced"
+				"muzzle_flash_effect_3rd_person"		"weapon_muzzle_flash_assaultrifle"
+				"muzzle_flash_effect_3rd_person_alt"		"weapon_muzzle_flash_assaultrifle_silenced"
+				"heat_effect"		"weapon_muzzle_smoke"
+				"player_animation_extension"		"m4_s"
+				"sound_single_shot"		"Weapon_M4A1.SilencedSingle"
+				"sound_special1"		"Weapon_M4A1.Silenced"
+				"sound_nearlyempty"		"Default.nearlyempty"
+			}
+		}
+		"wearable"
+		{
+			"item_class"		"wearable_item"
+			"flexible_loadout_category"		"clothing"
+			"inv_group_equipment"		"clothing"
+			"item_quality"		"normal"
+			"item_rarity"		"common"
+			"min_ilevel"		"1"
+			"max_ilevel"		"1"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"mouse_pressed_sound"		"sounds/ui/item_paper_pickup.vsnd"
+			"drop_sound"		"sounds/ui/item_paper_pickup.vsnd"
+			"capabilities"
+			{
+				"nameable"		"0"
+			}
+			"inventory_image_data"
+			{
+				"camera_angles"		"2.0 -130.0 0.0"
+				"camera_offset"		"0.0 1.0 -2.0"
+				"camera_fov"		"35.000000"
+				"override_default_light"		"1"
+				"spot_light_key"
+				{
+					"position"		"-120 120 180"
+					"color"		"2.1 2.1 2.1"
+					"lookat"		"0.0 0.0 0.0"
+					"inner_cone"		"0.500000"
+					"outer_cone"		"1.000000"
+				}
+				"spot_light_rim"
+				{
+					"position"		"10.0 -90.0 -60.0"
+					"color"		"4 4 4"
+					"lookat"		"0.0 0.0 0.0"
+					"inner_cone"		"0.040000"
+					"outer_cone"		"0.500000"
+				}
+			}
+		}
+		"hands"
+		{
+			"prefab"		"wearable"
+			"flexible_loadout_group"		"clothing_hands"
+			"flexible_loadout_slot"		"clothing_hands"
+			"inv_group_equipment"		"clothing_hands"
+			"item_type_name"		"#Type_Hands"
+			"item_name"		"#CSGO_Wearable_Hands"
+			"item_description"		"#CSGO_Wearable_Hands_Desc"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"gloves"		"0"
+				}
+			}
+		}
+		"hands_paintable"
+		{
+			"prefab"		"hands"
+			"craft_class"		"unusual"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"used_by_classes"
+			{
+				"counter-terrorists"		"1"
+				"terrorists"		"1"
+			}
+		}
+		"customplayer"
+		{
+			"prefab"		"wearable"
+			"flexible_loadout_category"		"customplayer"
+			"flexible_loadout_group"		"customplayer"
+			"flexible_loadout_slot"		"customplayer"
+			"legacy_character"		"0"
+			"inv_group_equipment"		"customplayer"
+			"item_type_name"		"#Type_CustomPlayer"
+			"item_name"		"#CSGO_CustomPlayer"
+			"item_description"		"#CSGO_CustomPlayer_Desc"
+			"inventory_image_data"
+			{
+				"camera_offset"		"75.28 -73.31 60.16"
+				"camera_angles"		"-1.15 138.06 0.00"
+				"camera_fov"		"20.000000"
+				"override_camera_lookat"		"1"
+				"root_mdl"		"models/player/custom_player/uiplayer/animset_uiplayer.vmdl"
+				"pose_sequence"		"cu_ct_pose01"
+				"override_default_light"		"1"
+				"ambient_light"		"0.19 0.22 0.29"
+				"shadow_light_offset"		"66.32 -17.06 124.60"
+				"shadow_light_angles"		"39.57 165.58 0.00"
+				"shadow_light_color"		"4.38 4.98 5.41"
+				"shadow_light_fov"		"54.000000"
+				"shadow_light_znear"		"4.000000"
+				"shadow_light_zfar"		"256.000000"
+				"shadow_light_atten_farz"		"512.000000"
+				"directional_light_0"
+				{
+					"direction"		"-0.50 0.80 0.00"
+					"color"		"0.21 0.21 0.22"
+				}
+				"directional_light_1"
+				{
+					"direction"		"0.70 -0.80 0.00"
+					"color"		"0.07 0.10 0.13"
+				}
+			}
+			"capabilities"
+			{
+				"can_patch"		"0"
+			}
+		}
+		"customplayertradable"
+		{
+			"prefab"		"customplayer"
+			"item_quality"		"unique"
+			"capabilities"
+			{
+				"can_patch"		"1"
+			}
+		}
+	}
+	"items"
+	{
+		"7"
+		{
+			"name"		"weapon_ak47"
+			"prefab"		"weapon_ak47_prefab"
+			"item_quality"		"normal"
+			"baseitem"		"1"
+			"flexible_loadout_slot"		"rifle1"
+			"flexible_loadout_default"		"1"
+		}
+		"9"
+		{
+			"name"		"weapon_awp"
+			"prefab"		"weapon_awp_prefab"
+			"item_quality"		"normal"
+			"baseitem"		"1"
+			"flexible_loadout_slot"		"rifle4"
+			"flexible_loadout_default"		"1"
+		}
+		"16"
+		{
+			"name"		"weapon_m4a1"
+			"prefab"		"weapon_m4a1_prefab"
+			"item_quality"		"normal"
+			"baseitem"		"1"
+			"flexible_loadout_slot"		"rifle0"
+			"flexible_loadout_default"		"0"
+			"item_shares_equip_slot"		"1"
+		}
+		"23"
+		{
+			"name"		"weapon_mp5sd"
+			"prefab"		"weapon_mp5sd_prefab"
+			"item_quality"		"normal"
+			"baseitem"		"1"
+			"flexible_loadout_slot"		"smg2"
+			"flexible_loadout_default"		"1"
+			"item_shares_equip_slot"		"1"
+		}
+		"33"
+		{
+			"name"		"weapon_mp7"
+			"prefab"		"weapon_mp7_prefab"
+			"item_quality"		"normal"
+			"baseitem"		"1"
+			"flexible_loadout_slot"		"smg0"
+			"flexible_loadout_default"		"0"
+			"item_shares_equip_slot"		"1"
+		}
+		"34"
+		{
+			"name"		"weapon_mp9"
+			"prefab"		"weapon_mp9_prefab"
+			"item_quality"		"normal"
+			"baseitem"		"1"
+			"flexible_loadout_slot"		"smg4"
+			"flexible_loadout_default"		"1"
+		}
+		"42"
+		{
+			"name"		"weapon_knife"
+			"prefab"		"melee"
+			"item_name"		"#SFUI_WPNHUD_Knife"
+			"item_description"		"#CSGO_Item_desc_Knife"
+			"item_quality"		"normal"
+			"baseitem"		"1"
+			"flexible_loadout_default"		"1"
+			"image_inventory"		"econ/weapons/base_weapons/weapon_knife"
+			"model_player"		"weapons/models/knife/knife_default_ct/weapon_knife_default_ct.vmdl"
+			"model_world"		"weapons/models/knife/knife_default_ct/weapon_knife_default_ct.vmdl"
+			"used_by_classes"
+			{
+				"counter-terrorists"		"1"
+			}
+			"inventory_image_data"
+			{
+				"camera_angles"		"0.0 -70.0 25.0"
+				"camera_offset"		"5.0 0 -2.5"
+			}
+			"attributes"
+			{
+				"icon display model"		"weapons/models/knife/knife_default_ct/weapon_knife_default_ct.vmdl"
+				"pedestal display model"		"weapons/models/knife/knife_default_ct/weapon_knife_default_ct.vmdl"
+			}
+		}
+		"59"
+		{
+			"name"		"weapon_knife_t"
+			"prefab"		"melee"
+			"item_name"		"#SFUI_WPNHUD_Knife_T"
+			"item_description"		"#CSGO_Item_desc_Knife_T"
+			"item_quality"		"normal"
+			"baseitem"		"1"
+			"flexible_loadout_default"		"1"
+			"image_inventory"		"econ/weapons/base_weapons/weapon_knife_t"
+			"icon_default_image"		"materials/icons/inventory_icon_weapon_knife_t.vtf"
+			"model_player"		"weapons/models/knife/knife_default_t/weapon_knife_default_t.vmdl"
+			"model_world"		"weapons/models/knife/knife_default_t/weapon_knife_default_t.vmdl"
+			"used_by_classes"
+			{
+				"terrorists"		"1"
+			}
+			"inventory_image_data"
+			{
+				"camera_angles"		"0.0 -70.0 25.0"
+				"camera_offset"		"7.0 0 -2"
+			}
+			"attributes"
+			{
+				"icon display model"		"weapons/models/knife/knife_default_t/weapon_knife_default_t.vmdl"
+				"pedestal display model"		"weapons/models/knife/knife_default_t/weapon_knife_default_t.vmdl"
+			}
+		}
+		"60"
+		{
+			"name"		"weapon_m4a1_silencer"
+			"prefab"		"weapon_m4a1_silencer_prefab"
+			"item_quality"		"normal"
+			"baseitem"		"1"
+			"flexible_loadout_slot"		"rifle1"
+			"flexible_loadout_default"		"1"
+			"item_shares_equip_slot"		"1"
+		}
+		"500"
+		{
+			"name"		"weapon_bayonet"
+			"prefab"		"melee_unusual"
+			"item_name"		"#SFUI_WPNHUD_KnifeBayonet"
+			"item_description"		"#CSGO_Item_Desc_Knife_Bayonet"
+			"image_inventory"		"econ/weapons/base_weapons/weapon_bayonet"
+			"icon_default_image"		"materials/icons/inventory_icon_weapon_bayonet.vtf"
+			"model_player"		"weapons/models/knife/knife_bayonet/weapon_knife_bayonet.vmdl"
+			"model_world"		"weapons/models/knife/knife_bayonet/weapon_knife_bayonet.vmdl"
+			"used_by_classes"
+			{
+				"terrorists"		"1"
+				"counter-terrorists"		"1"
+			}
+			"attributes"
+			{
+				"pedestal display model"		"weapons/models/knife/knife_bayonet/weapon_knife_bayonet.vmdl"
+			}
+			"paint_data"
+			{
+				"PaintableMaterial0"
+				{
+					"Name"		"knife_bayonet"
+					"ViewmodelDim"		"2048"
+					"WorldDim"		"512"
+					"BaseTextureOverride"		"0"
+					"WeaponLength"		"14.518000"
+					"UVScale"		"0.505000"
+				}
+			}
+		}
+		"507"
+		{
+			"name"		"weapon_knife_karambit"
+			"prefab"		"melee_unusual"
+			"item_name"		"#SFUI_WPNHUD_KnifeKaram"
+			"item_description"		"#CSGO_Item_Desc_Knife_Karam"
+			"image_inventory"		"econ/weapons/base_weapons/weapon_knife_karambit"
+			"icon_default_image"		"materials/icons/inventory_icon_weapon_knife_karambit.vtf"
+			"model_player"		"weapons/models/knife/knife_karambit/weapon_knife_karambit.vmdl"
+			"model_world"		"weapons/models/knife/knife_karambit/weapon_knife_karambit.vmdl"
+			"used_by_classes"
+			{
+				"terrorists"		"1"
+				"counter-terrorists"		"1"
+			}
+			"attributes"
+			{
+				"pedestal display model"		"weapons/models/knife/knife_karambit/weapon_knife_karambit.vmdl"
+			}
+			"inventory_image_data"
+			{
+				"camera_angles"		"30.0 -95.0 -5.0"
+				"camera_offset"		"10.0 1.5 -3.2"
+			}
+			"paint_data"
+			{
+				"PaintableMaterial0"
+				{
+					"Name"		"knife_karam"
+					"OrigMat"		"karam"
+					"ViewmodelDim"		"2048"
+					"WorldDim"		"512"
+					"BaseTextureOverride"		"0"
+					"WeaponLength"		"9.813000"
+					"UVScale"		"0.438000"
+				}
+			}
+		}
+		"5027"
+		{
+			"name"		"studded_bloodhound_gloves"
+			"prefab"		"hands_paintable"
+			"model_player"		"agents/models/shared/arms/glove_bloodhound/glove_bloodhound.vmdl"
+			"model_world"		"agents/models/shared/arms/glove_bloodhound/glove_bloodhound.vmdl"
+			"item_name"		"#CSGO_Wearable_t_studdedgloves"
+			"item_description"		"#CSGO_Wearable_t_studdedgloves_Desc"
+		}
+		"5030"
+		{
+			"name"		"sporty_gloves"
+			"prefab"		"hands_paintable"
+			"model_player"		"agents/models/shared/arms/glove_sporty/glove_sporty.vmdl"
+			"model_world"		"agents/models/shared/arms/glove_sporty/glove_sporty.vmdl"
+			"item_name"		"#CSGO_Wearable_v_sporty_glove"
+			"item_description"		"#CSGO_Wearable_v_sporty_glove_Desc"
+		}
+	}
+	"sticker_kits"
+	{
+		"1"
+		{
+			"name"		"dh_gologo1"
+			"item_name"		"#StickerKit_dh_gologo1"
+			"description_string"		"#StickerKit_desc_dh_gologo1"
+			"sticker_material"		"dreamhack/dh_gologo1"
+			"tournament_event_id"		"1"
+		}
+		"2"
+		{
+			"name"		"dh_gologo1_holo"
+			"item_name"		"#StickerKit_dh_gologo1_holo"
+			"description_string"		"#StickerKit_desc_dh_gologo1_holo"
+			"sticker_material"		"dreamhack/dh_gologo1_holo"
+			"tournament_event_id"		"1"
+		}
+	}
+	"paint_kits"
+	{
+		"0"
+		{
+			"name"		"default"
+			"description_string"		"#PaintKit_Default"
+			"description_tag"		"#PaintKit_Default_Tag"
+			"wear_gradient"		"canvas"
+			"wear_default"		"0.100000"
+			"wear_remap_min"		"0.060000"
+			"wear_remap_max"		"0.800000"
+			"seed"		"0"
+			"style"		"0"
+		}
+		"5"
+		{
+			"name"		"hy_ddpat"
+			"use_legacy_model"		"1"
+			"description_string"		"#PaintKit_hy_ddpat"
+			"description_tag"		"#PaintKit_hy_ddpat_Tag"
+			"style"		"2"
+		}
+		"180"
+		{
+			"name"		"cu_fireserpent_ak47_bravo"
+			"use_legacy_model"		"1"
+			"description_string"		"#PaintKit_cu_fireserpent_ak47_bravo"
+			"description_tag"		"#PaintKit_cu_fireserpent_ak47_bravo_Tag"
+			"style"		"7"
+			"wear_remap_max"		"0.760000"
+		}
+		"344"
+		{
+			"name"		"cu_medieval_dragon_awp"
+			"use_legacy_model"		"1"
+			"description_string"		"#PaintKit_cu_medieval_dragon_awp"
+			"description_tag"		"#PaintKit_cu_medieval_dragon_awp_Tag"
+			"style"		"7"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.700000"
+		}
+		"10018"
+		{
+			"name"		"sporty_light_blue"
+			"description_string"		"#PaintKit_sporty_light_blue"
+			"description_tag"		"#PaintKit_sporty_light_blue_tag"
+			"vmt_path"		"materials/models/weapons/customization/paints_gloves/sporty_lightblue.vmat"
+		}
+	}
+	"client_loot_lists"
+	{
+		"set_nuke_2_rare"
+		{
+			"[hy_blueprint_aqua]weapon_p90"		"1"
+			"[am_circuitboard_aqua]weapon_mp5sd"		"1"
+			"[hy_ducts_blue]weapon_p250"		"1"
+			"[hy_nuclear_skulls_redblue]weapon_awp"		"1"
+		}
+	}
+	"client_loot_lists"
+	{
+		"crate_operation_ii_ancient"
+		{
+			"[cu_fireserpent_ak47_bravo]weapon_ak47"		"1"
+			"[am_scales_bravo]weapon_deagle"		"1"
+		}
+		"set_cobblestone_ancient"
+		{
+			"[cu_medieval_dragon_awp]weapon_awp"		"1"
+		}
+	}
+	"music_definitions"
+	{
+		"1"
+		{
+			"name"		"valve_cs2_01"
+			"loc_name"		"#musickit_valve_cs2_01"
+			"loc_description"		"#musickit_valve_cs2_01_desc"
+			"image_inventory"		"econ/music_kits/valve_cs2_01"
+			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_valve_cs2_01.vmdl"
+		}
+		"3"
+		{
+			"name"		"danielsadowski_01"
+			"loc_name"		"#musickit_danielsadowski_01"
+			"loc_description"		"#musickit_danielsadowski_01_desc"
+			"image_inventory"		"econ/music_kits/danielsadowski_01"
+			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_danielsadowski_01.vmdl"
+		}
+	}
+	"items"
+	{
+		"5105"
+		{
+			"name"		"customplayer_tm_leet_variantg"
+			"prefab"		"customplayertradable"
+			"model_player"		"agents/models/tm_leet/tm_leet_variantg.vmdl"
+			"item_name"		"#CSGO_CustomPlayer_tm_leet_variantg"
+			"item_description"		"#CSGO_CustomPlayer_tm_leet_variantg_Desc"
+			"image_inventory"		"econ/characters/customplayer_tm_leet_variantg"
+			"item_rarity"		"rare"
+			"legacy_character"		"0"
+			"used_by_classes"
+			{
+				"terrorists"		"1"
+			}
+			"attributes"
+			{
+				"icon display model"		"agents/models/tm_leet/tm_leet_variantg.vmdl"
+			}
+			"inventory_image_data"
+			{
+				"pose_sequence"		"cu_t_pose03"
+			}
+			"stickers"		"agent"
+		}
+	}
+	"items"
+	{
+		"5305"
+		{
+			"name"		"customplayer_ctm_fbi_variantf"
+			"prefab"		"customplayertradable"
+			"model_player"		"agents/models/ctm_fbi/ctm_fbi_variantf.vmdl"
+			"item_name"		"#CSGO_CustomPlayer_ctm_fbi_variantf"
+			"item_description"		"#CSGO_CustomPlayer_ctm_fbi_variantf_Desc"
+			"image_inventory"		"econ/characters/customplayer_ctm_fbi_variantf"
+			"item_rarity"		"rare"
+			"legacy_character"		"0"
+			"used_by_classes"
+			{
+				"counter-terrorists"		"1"
+			}
+			"attributes"
+			{
+				"icon display model"		"agents/models/ctm_fbi/ctm_fbi_variantf.vmdl"
+			}
+			"inventory_image_data"
+			{
+				"pose_sequence"		"cu_ct_pose01"
+			}
+			"stickers"		"agent"
+		}
+	}
+	"paint_kits"
+	{
+		"941"
+		{
+			"name"		"cu_ak-47_phantom_disruptor"
+			"use_legacy_model"		"1"
+			"description_string"		"#PaintKit_cu_ak-47_phantom_disruptor"
+			"description_tag"		"#PaintKit_cu_ak-47_phantom_disruptor_Tag"
+			"style"		"7"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.650000"
+		}
+	}
+	"paint_kits"
+	{
+		"106"
+		{
+			"name"		"m4a1s_vaporwave"
+			"description_string"		"PaintKit_m4a1s_vaporwave"
+			"description_tag"		"PaintKit_m4a1s_vaporwave_Tag"
+			"style"		"7"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.597321"
+			"composite_material_path"		"weapons/paints/community/community_34/m4a1s_vaporwave.vcompmat"
+		}
+	}
+	"keychain_definitions"
+	{
+		"1"
+		{
+			"name"		"kc_missinglink_ava"
+			"loc_name"		"#keychain_kc_missinglink_ava"
+			"loc_description"		"#keychain_kc_missinglink_ava_desc"
+			"item_rarity"		"rare"
+			"image_inventory"		"econ/keychains/missinglink/kc_missinglink_ava"
+			"pedestal_display_model"		"weapons/keychains/missinglink/vmdl/kc_missinglink_ava.vmdl"
+			"icon_base"		"kc_missinglink"
+		}
+	}
+	"music_definitions"
+	{
+		"104"
+		{
+			"name"		"starjunk95_01"
+			"loc_name"		"#MusicKit_starjunk95_01"
+			"loc_description"		"#MusicKit_starjunk95_01_desc"
+			"image_inventory"		"econ/music_kits/starjunk95_01"
+			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_starjunk95_01.vmdl"
+		}
+	}
+	"prefabs"
+	{
+		"cologne2026_sticker_capsule_prefab"
+		{
+			"first_sale_date"		"2026-05-20"
+			"prefab"		"weapon_case_base"
+			"inv_container_and_tools"		"sticker_capsule"
+			"attributes"
+			{
+				"tournament event id"		"26"
+			}
+		}
+	}
+	"keychain_definitions"
+	{
+		"84"
+		{
+			"name"		"kc_cologne2026"
+			"loc_name"		"#keychain_kc_cologne2026"
+			"loc_description"		"#keychain_kc_cologne2026_desc"
+			"item_rarity"		"rare"
+			"item_quality"		"tournament"
+			"is commodity"		"1"
+			"image_inventory"		"econ/keychains/cologne2026/kc_cologne2026"
+			"pedestal_display_model"		"weapons/keychains/cologne2026/kc_cologne2026.vmdl"
+			"tags"
+			{
+				"KeychainCapsule"
+				{
+					"tag_value"		"keychain_pack_kc_cologne2026_lootlist"
+					"tag_text"		"#keychain_kc_cologne2026"
+					"tag_group"		"KeychainCapsule"
+					"tag_group_text"		"#SFUI_InvTooltip_KeychainCapsuleTag"
+				}
+			}
+		}
+	}
+	"sticker_kits"
+	{
+		"10369"
+		{
+			"name"		"cologne2026_team_vita"
+			"item_name"		"#StickerKit_cologne2026_team_vita"
+			"description_string"		"#EventItemDesc_cologne2026_sticker_team"
+			"sticker_material"		"cologne2026/vita"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"26"
+			"tournament_team_id"		"89"
+		}
+	}
+}
+
+"lang"
+{
+	"Language" "English"
+	"Tokens"
+	{
+		"SFUI_WPNHUD_AK47"						"AK-47"
+		"SFUI_WPNHUD_AWP"						"AWP"
+		"SFUI_WPNHUD_Knife"						"Knife"
+		"SFUI_WPNHUD_Knife_T"					"Knife"
+		"SFUI_WPNHUD_M4A1"						"M4A4"
+		"SFUI_WPNHUD_M4_SILENCER"				"M4A1-S"
+		"SFUI_WPNHUD_MP7"						"MP7"
+		"SFUI_WPNHUD_MP5SD"						"MP5-SD"
+		"SFUI_WPNHUD_MP9"						"MP9"
+		"SFUI_WPNHUD_KnifeBayonet"				"Bayonet"
+		"SFUI_WPNHUD_KnifeKaram"				"Karambit"
+		"Econ_Revolving_Loot_List_Rare_Item"	"or an Exceedingly Rare Special Item!"
+		"Exceedingly_Rare_Item"					"★ Rare Special Item ★"
+		"CSGO_Type_Knife"							"Knife"
+		"CSGO_Type_Rifle"							"Rifle"
+		"CSGO_Type_SMG"								"SMG"
+		"CSGO_Type_SniperRifle"						"Sniper Rifle"
+		"CSGO_Type_WeaponCase"						"Container"
+		"CSGO_Type_Weapon"							"Weapon"
+		"Type_Hands"								"Gloves"
+		"Type_CustomPlayer"							"Agent"
+		"CSGO_Item_Desc_AK47"												"Powerful and reliable, the AK-47 is one of the most popular assault rifles in the world. It is most deadly in short, controlled bursts of fire."
+		"CSGO_Item_Desc_MP7"												"Versatile but expensive, the German-made MP7 SMG is the perfect choice for high-impact close-range combat."
+		"CSGO_Item_Desc_MP5SD"												"Often imitated but never equaled, the iconic MP5 is perhaps the most versatile and popular SMG in the world. This SD variant features an integrated silencer, making an already formidable weapon whisper-quiet."
+		"CSGO_Item_Desc_MP9"												"Manufactured in Switzerland, the cutting-edge MP9 SMG is an ergonomic polymer weapon favored by private security firms."
+		"CSGO_Item_Desc_M4A4"												"More accurate but less damaging than its AK-47 counterpart, the M4A4 is the full-auto assault rifle of choice for CTs."
+		"CSGO_Item_Desc_AWP"												"High risk and high reward, the infamous AWP is recognizable by its signature report and one-shot, one-kill policy."
+		"CSGO_Item_desc_Knife"												"Quiet and always available, the knife has a fast, low-damage primary attack and a slow, high-damage secondary attack. A backstab will earn quiet players an instant kill."
+		"CSGO_Item_desc_Knife_T"											"Quiet and always available, the knife has a fast, low-damage primary attack and a slow, high-damage secondary attack. A backstab will earn quiet players an instant kill."
+		"CSGO_Item_desc_m4a1_silencer"								"With a smaller magazine than its unmuffled counterpart, the silenced M4A1 provides quieter shots with less recoil and better accuracy."
+		"CSGO_Item_Desc_Knife_Bayonet"			"Relatively unchanged in its design since World War II, the bayonet still retains a place in modern military strategy. Bayonet charges have continued to be effective as recently as the second Gulf War and the war in Afghanistan."
+		"CSGO_Item_Desc_Knife_Karam"			"With its curved blade mimicking a tiger's claw, the karambit was developed as part of the southeast Asian martial discipline of silat. The knife is typically used with a reverse grip, with the finger ring on the index finger."
+		"musickit_valve_cs2_01"					"Valve, Counter-Strike 2"
+		"musickit_valve_cs2_01_desc"			"The official music kit of Counter-Strike 2."
+		"musickit_danielsadowski_01"			"Daniel Sadowski, Crimson Assault"
+		"musickit_danielsadowski_01_desc"		"Video Game Composer Daniel Sadowski delivers Edgy Action mixed with CRAZY FAT beats in this pulsating, exhilarating Music Pack."
+		"musickit_starjunk95_01"				"Starjunk 95, Industrial Sunset Memories"
+		"musickit_starjunk95_01_desc"			"Experience a music kit from the grooviest station in the galaxy, featuring the newest sounds of today drenched with vintage nostalgia of yesterday. This is Starjunk 95."
+		"StickerKit_dh_gologo1"						"Shooter"
+		"StickerKit_desc_dh_gologo1"				"StickerKit_desc_dh_gologo1"
+		"StickerKit_dh_gologo1_holo"				"Shooter (Foil)"
+		"StickerKit_desc_dh_gologo1_holo"			"StickerKit_desc_dh_gologo1_holo"
+		"EventItemDesc_cologne2026_sticker_team" ""
+		"StickerKit_cologne2026_team_vita" "Vitality | Cologne 2026"
+		"keychain_kc_cologne2026"			"Cologne 2026 Highlight"
+		"keychain_kc_cologne2026_desc"		"This souvenir charm commemorates the IEM Cologne 2026 CS2 Major Championship and features a highlight reel."
+		"CSGO_WeaponCase_Standard"					"CS:GO Weapon Case"
+		"keychain_kc_missinglink_ava"						"Lil' Ava"
+		"keychain_kc_missinglink_ava_desc"					""
+		"PaintKit_Default"							"Unnamed Paint Kit"
+		"PaintKit_Default_Tag"						"-"
+		"PaintKit_hy_ddpat"							"It has been painted using a Digital Disruptive Pattern (DDPAT) hydrographic.\n\n<i>By the time you're close enough to notice the pixels it's already too late</i>"
+		"PaintKit_hy_ddpat_Tag"						"Forest DDPAT"
+		"PaintKit_cu_fireserpent_ak47_bravo"		"This memento from Ruins has been painted with a fire serpent motif.\n\n<i>If you want to survive in the streets, learn to spit fire</i>"
+		"PaintKit_cu_fireserpent_ak47_bravo_Tag"	"Fire Serpent"
+		"PaintKit_cu_medieval_dragon_awp"			"It has been custom painted with a knotwork dragon.\n\n<i>200 keys could never unlock its secrets</i>"
+		"PaintKit_cu_medieval_dragon_awp_Tag"		"Dragon Lore"
+		"CSGO_Wearable_t_studdedgloves"				"Bloodhound Gloves"
+		"CSGO_Wearable_t_studdedgloves_Desc"		"These fingerless gloves have been decorated with metal studs and the Operation Bloodhound logo."
+		"CSGO_Wearable_v_sporty_glove"				"Sport Gloves"
+		"CSGO_Wearable_v_sporty_glove_Desc"			"Synthetic fabrics make these athletic gloves durable and eye-catching."
+		"CSGO_CustomPlayer_tm_leet_variantg"					"Ground Rebel  | Elite Crew"
+		"CSGO_CustomPlayer_tm_leet_variantg_Desc"				"An expert in local knowledge for Elite Crew's urban operations, Ground Rebels are known for keeping an ear to the ground.\n\n<i>That's the signal.</i>"
+		"CSGO_CustomPlayer_ctm_fbi_variantf"					"Operator | FBI SWAT"
+		"CSGO_CustomPlayer_ctm_fbi_variantf_Desc"				"Members of the FBI's SWAT team are deployed in high-risk situations. Counterterrorism, hostage rescue, and bomb defusals are a few of the many disciplines FBI SWAT agents specialize in.\n\n<i>Fidelity, Bravery, Integrity.</i>"
+		"PaintKit_sporty_light_blue"				"The blue and black gloves are ideal for those who wish to be phenomenal.\n\n<i>They don't want none</i>"
+		"PaintKit_sporty_light_blue_tag"			"Superconductor"
+		"PaintKit_cu_ak-47_phantom_disruptor"						"A mistform illusion creature has been custom painted over a matte black base.\n\n<i>\"It can be whatever it wants, wherever it wants, and yet it chooses to reside with you…\"</i>"
+		"PaintKit_cu_ak-47_phantom_disruptor_Tag"					"Phantom Disruptor"
+		"PaintKit_m4a1s_vaporwave"						"It has been custom painted with a Greco-Roman statue and other distorted imagery from a bygone era.\n\n<i>From a hypnagogic dream</i>"
+		"PaintKit_m4a1s_vaporwave_Tag"					"Vaporwave"
+		"SFUI_InvTooltip_KeychainCapsuleTag"				"Charms Collection"
+	}
+}

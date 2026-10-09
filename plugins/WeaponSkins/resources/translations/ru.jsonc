@@ -1,0 +1,11 @@
+{
+  // Chat messages of the !wp sync and the menu commands, worded like the original Pisex
+  // skinchanger's phrases (ru). Picked automatically for clients whose cl_language is russian.
+  // {url} = Main.Commands.SiteUrl, {command} = "!" + Main.Commands.SyncCommand,
+  // {seconds} = cooldown left, "\\n" = new chat line.
+  "sync.redirect": " {GREEN}[SkinChanger]{DEFAULT} Чтобы установить скины перейдите на сайт: {GREEN}{url}{DEFAULT}\\n {GREEN}[SkinChanger]{DEFAULT} Чтобы обновить данные без перезахода используйте {GREEN}{command}{DEFAULT}",
+  "sync.done": " {GREEN}[SkinChanger]{DEFAULT} Вы {GREEN}успешно{DEFAULT} обновили данные",
+  "sync.empty": " {GREEN}[SkinChanger]{DEFAULT} На сайте {GREEN}{url}{DEFAULT} у вас пока ничего не настроено",
+  "sync.cooldown": " {GREEN}[SkinChanger]{DEFAULT} Вы не можете обновлять так часто, попробуйте через {RED}{seconds} c.{DEFAULT}",
+  "sync.error": " {GREEN}[SkinChanger]{DEFAULT} Не удалось обновить данные, попробуйте позже"
+}

@@ -1,0 +1,18 @@
+"Databases"
+{
+	"skins"
+	{
+		// "mysql" (share the database with the Metamod server) or "sqlite" (local file, no server).
+		"driver"	"mysql"
+
+		// The real values of the website database go here (user/pass are filled in on the server).
+		"host"		"127.0.0.1"
+		"port"		"3306"
+		"user"		""
+		"pass"		""
+		"database"	"mirrors"
+
+		// SQLite only: relative paths are resolved against the plugin data directory.
+		"sqlite_path"	"WeaponSkins.sqlite3"
+	}
+}
