@@ -1,0 +1,246 @@
+// SYNTHETIC, format-faithful subset of CS2's scripts/items/items_game.txt, written for the
+// WeaponSkins econ unit tests. It is NOT an extract of the live game file and must never be used
+// as a source of game facts: the def_index/name pairs and models below are fixture data chosen to
+// exercise the parser (the task owner asked for 23 = weapon_mp5sd specifically; the real mapping
+// always comes from the game's own items_game.txt at runtime through s2sdk::ReadFileVPK).
+//
+// Structure mirrors the real file: "prefabs" with chained `prefab` references, "items" keyed by
+// def_index, several repeated blocks ("paint_kits" twice, "sticker_kits" twice), a pre-KV1-style
+// prefab cycle (loop_a <-> loop_b), used_by_classes on both items and prefabs, agents under the
+// `customplayertradable` prefab, and loot_lists / client_loot_lists with a reference chain and a
+// cycle.
+"items_game"
+{
+	"prefabs"
+	{
+		"weapon_smg_base"
+		{
+			"baseitem"		"1"
+			"model_player"	"models/weapons/v_smg_mp5sd.vmdl"
+			"used_by_classes"
+			{
+				"t"		"1"
+			}
+		}
+		"weapon_mp5sd_prefab"
+		{
+			"prefab"	"weapon_smg_base"
+			"item_name"	"#SFUI_WPNHUD_MP5SD"
+		}
+		"melee_unusual"
+		{
+			"baseitem"		"1"
+			"model_player"	"models/weapons/v_knife_karambit.vmdl"
+		}
+		"hands_paintable"
+		{
+			"baseitem"	"1"
+		}
+		"customplayertradable"
+		{
+			"used_by_classes"
+			{
+				"ct"	"1"
+			}
+		}
+		"customplayer_balkan_prefab"
+		{
+			"prefab"		"customplayertradable"
+			"model_player"	"characters\\models\\tm_balkan\\tm_balkan_variantA"
+		}
+		"loop_a"
+		{
+			"prefab"	"loop_b"
+		}
+		"loop_b"
+		{
+			"prefab"	"loop_a"
+		}
+	}
+	"items"
+	{
+		"7"
+		{
+			"name"			"weapon_ak47"
+			"baseitem"		"1"
+			"item_name"		"#SFUI_WPNHUD_AK47"
+			"model_player"	"models/weapons/v_rif_ak47.vmdl"
+			"used_by_classes"
+			{
+				"t"		"1"
+			}
+		}
+		"23"
+		{
+			// classname and model are inherited from the prefab chain (model via two levels).
+			"name"		"weapon_mp5sd"
+			"prefab"	"weapon_mp5sd_prefab"
+		}
+		"40"
+		{
+			"name"			"weapon_ssg08"
+			"baseitem"		"1"
+			"item_name"		"#SFUI_WPNHUD_SSG08"
+			"model_player"	"models/weapons/v_snip_ssg08.vmdl"
+		}
+		"60"
+		{
+			"name"			"weapon_m4a1_silencer"
+			"baseitem"		"1"
+			"item_name"		"#SFUI_WPNHUD_M4A1_SILENCER"
+			"model_player"	"models/weapons/v_rif_m4a1_silencer.vmdl"
+			"used_by_classes"
+			{
+				"ct"	"1"
+			}
+		}
+		"100"
+		{
+			// no baseitem, no weapon/knife/glove prefab: must not become an item definition.
+			"name"		"weapon_healthshot_like_tool"
+			"item_name"	"#SFUI_WPNHUD_Healthshot"
+		}
+		"507"
+		{
+			"name"		"weapon_knife_karambit"
+			"prefab"	"melee_unusual"
+			"item_name"	"#SFUI_WPNHUD_KnifeKarambit"
+		}
+		"5027"
+		{
+			"name"			"weapon_bloodhound_gloves"
+			"prefab"		"hands_paintable"
+			"item_name"		"#SFUI_WPNHUD_BloodhoundGloves"
+			"model_player"	"models/weapons/v_gloves_bloodhound.vmdl"
+		}
+		"6001"
+		{
+			// agent: customplayertradable prefab, model in its own subtree.
+			"name"			"customplayer_ctm_sas"
+			"prefab"		"customplayertradable"
+			"item_name"		"#SFUI_Agent_CTM_SAS"
+			"model_player"	"characters/models/ctm_sas/ctm_sas.vmdl"
+		}
+		"6002"
+		{
+			// agent: model only on the prefab chain, with backslashes and no extension.
+			"name"		"customplayer_tm_balkan"
+			"prefab"	"customplayer_balkan_prefab"
+			"item_name"	"#SFUI_Agent_TM_Balkan"
+		}
+		"9001"
+		{
+			// sits on a prefab cycle: the parser must terminate and keep its own model.
+			"name"			"weapon_loop_test"
+			"prefab"		"loop_a"
+			"baseitem"		"1"
+			"model_player"	"models/weapons/v_loop.vmdl"
+		}
+	}
+	"paint_kits"
+	{
+		"1"
+		{
+			"name"				"so_blue"
+			"description_tag"	"#PaintKit_so_blue"
+		}
+		"400"
+		{
+			"name"				"aq_mp5sd_legacy"
+			"use_legacy_model"	"1"
+			"description_tag"	"#PaintKit_aq_mp5sd_legacy"
+		}
+		"abc"
+		{
+			// non-numeric key: not addressable, must be skipped.
+			"name"	"not_numeric_kit"
+		}
+	}
+	"paint_kits"
+	{
+		"777"
+		{
+			"name"				"cu_second_block"
+			"description_tag"	"#PaintKit_cu_second_block"
+		}
+	}
+	"sticker_kits"
+	{
+		"9"
+		{
+			"name"				"sticker_crown"
+			"sticker_material"	"crown"
+			"item_name"			"#StickerKit_crown"
+		}
+	}
+	"sticker_kits"
+	{
+		"12"
+		{
+			"name"				"sticker_bravo"
+			"sticker_material"	"bravo"
+			"item_name"			"#StickerKit_bravo"
+		}
+		"13"
+		{
+			// spray/other kit without a sticker material: skipped.
+			"name"		"spray_without_material"
+			"item_name"	"#SprayKit_x"
+		}
+	}
+	"keychain_definitions"
+	{
+		"42"
+		{
+			"name"		"keychain_diecast"
+			"loc_name"	"#Keychain_Tag_42"
+		}
+	}
+	"music_definitions"
+	{
+		"3"
+		{
+			"name"		"music_csgo_main"
+			"loc_name"	"#Mus_Main_Tag"
+		}
+		"7"
+		{
+			// the "id" field wins over the block key.
+			"id"		"70"
+			"name"		"music_halo"
+			"loc_name"	"#Mus_Halo_Tag"
+		}
+	}
+	"loot_lists"
+	{
+		"weapon_case_alpha"
+		{
+			"weapon_ak47"	"1"
+			"weapon_ssg08"	"1"
+		}
+	}
+	"client_loot_lists"
+	{
+		"crate_root"
+		{
+			// references another list: expanded recursively.
+			"crate_group"	"1"
+		}
+		"crate_group"
+		{
+			// "[item]belonging" entries reduce to the item name.
+			"[weapon_ak47]weapon"	"1"
+			"[weapon_deagle]weapon"	"1"
+		}
+		"crate_cycle_a"
+		{
+			"crate_cycle_b"	"1"
+		}
+		"crate_cycle_b"
+		{
+			// cycle back to crate_cycle_a: the back reference is dropped, not looped.
+			"crate_cycle_a"	"1"
+			"weapon_glock"	"1"
+		}
+	}
+}

@@ -1,0 +1,18 @@
+// SYNTHETIC, format-faithful subset of CS2's resource/csgo_russian.txt. Deliberately missing
+// SFUI_WPNHUD_SSG08 and PaintKit_cu_second_block so that the english fallback path can be tested.
+// Read by econ_tests.cpp as-is (UTF-8, no BOM). Not an extract of the live game file.
+"lang"
+{
+	"Language"	"Russian"
+	"Tokens"
+	{
+		"SFUI_WPNHUD_AK47"		"АК-47"
+		"SFUI_WPNHUD_MP5SD"		"MP5-SD"
+		"SFUI_Agent_CTM_SAS"	"САС"
+		"SFUI_Agent_TM_Balkan"	"Балканец"
+		"PaintKit_so_blue"		"Синий"
+		"StickerKit_crown"		"Корона (фольга)"
+		"Keychain_Tag_42"		"Литой"
+		"Mus_Main_Tag"			"Главное меню"
+	}
+}
