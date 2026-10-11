@@ -1,0 +1,9 @@
+{
+    // Test fixture — English phrases (WeaponSkins unit tests only).
+    "menu.title": "Weapon Skins",
+    "menu.unset": "Unset",
+    "menu.skinproperties.setsticker": "Sticker {0} ({1})",
+    "greet.hello": "Hello, {0}!",
+    "braces.literal": "100% {not_a_placeholder} safe",
+    "case.KEY.MixedCase": "Mixed case key"
+}

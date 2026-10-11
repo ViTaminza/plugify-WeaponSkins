@@ -1,0 +1,19 @@
+{
+  "$schema": "https://raw.githubusercontent.com/untrustedmodders/plugify/refs/heads/main/schemas/plugin.schema.json",
+  "version": "@WEAPONSKINS_VERSION@",
+  "name": "WeaponSkins",
+  "description": "Native C++ port: Pisex website skins, knives, gloves, agents, music kits, pins, stickers, keychains, StatTrak and wp sync.",
+  "author": "samyyc, ELDment; Plugify port",
+  "website": "https://plugify.net/",
+  "license": "GPL-3.0",
+  "entry": "bin/WeaponSkins",
+  "platforms": [],
+  "language": "cpp",
+  "dependencies": [
+    {"name": "s2sdk", "constraints": ">=2.18.2"},
+    {"name": "polyhook", "constraints": ">=2.5.6"},
+    {"name": "permissions", "constraints": ">=1.3.1", "optional": true},
+    {"name": "hudmenu", "constraints": ">=1.0.0", "optional": true}
+  ],
+  "methods": []
+}
