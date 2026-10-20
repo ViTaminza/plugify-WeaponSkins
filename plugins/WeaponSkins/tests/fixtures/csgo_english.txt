@@ -1,0 +1,24 @@
+// SYNTHETIC, format-faithful subset of CS2's resource/csgo_english.txt (the real file ships as
+// UTF-8 with a BOM and holds ~250k tokens). Only the tokens behind the #SFUI_/#PaintKit_/#… keys
+// used by tests/fixtures/items_game.txt are present. This file itself is BOM-less; econ_tests.cpp
+// prepends the UTF-8 BOM when it exercises the BOM-stripping path. Not an extract of the game.
+"lang"
+{
+	"Language"	"English"
+	"Tokens"
+	{
+		"SFUI_WPNHUD_AK47"			"AK-47"
+		"SFUI_WPNHUD_MP5SD"			"MP5-SD"
+		"SFUI_WPNHUD_SSG08"			"SSG 08"
+		"SFUI_Agent_CTM_SAS"		"SAS"
+		"SFUI_Agent_TM_Balkan"		"Balkan"
+		"PaintKit_so_blue"			"Blue"
+		"PaintKit_aq_mp5sd_legacy"	"Legacy Blue"
+		"PaintKit_cu_second_block"	"Second Block"
+		"StickerKit_crown"			"Crown (Foil)"
+		"StickerKit_bravo"			"Bravo"
+		"Keychain_Tag_42"			"Die-cast"
+		"Mus_Main_Tag"				"Main Menu"
+		"Mus_Halo_Tag"				"Halo"
+	}
+}

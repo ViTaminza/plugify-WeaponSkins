@@ -1,0 +1,7 @@
+{
+    // Test fixture — Russian phrases (deliberately partial: menu.unset is missing so the
+    // English fallback is exercised).
+    "menu.title": "Скины",
+    "greet.hello": "Привет, {0}!",
+    "unicode.name": "Скины «АК-47»"
+}

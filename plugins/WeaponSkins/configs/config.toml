@@ -1,0 +1,23 @@
+[Main]
+MusicKitMvpAnthem = false   # гимн MVP из набора скинченджера выключен: в конце раунда играет round_end_sounds
+ResetGlovesOnDeath = true   # player_death PRE: сбросить кастомные перчатки жертвы (def 0 + init 0), чтобы клиент не оставлял модель перчаток на земле/в воздухе после смерти
+StorageBackend = "pisex"
+InventoryUpdateBackend = "hook"
+SyncFromDatabaseWhenPlayerJoin = false
+ItemLanguages = []
+
+[Main.Pisex]
+ConnectionName = "skins"
+TablePrefix = "sc_"
+ServerId = 1
+AutoCreatePlayer = true
+UseExtTable = true
+LazyLoadPerPlayer = true
+PinsEnabled = true
+
+[Main.Commands]
+RedirectMenusToSite = true
+SiteUrl = "example.com"
+MenuAliases = ["ws", "skins", "gloves", "knife", "agents", "music", "stickers", "keychains", "pins"]
+SyncCommand = "wp"
+SyncCooldownSeconds = 20
